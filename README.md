@@ -5,7 +5,7 @@ Blog de viajes con ideas para descubrir destinos de la Comunidad Valenciana y or
 ## Qué encontrarás
 
 - Una portada con destinos destacados y acceso a sus fichas.
-- Guías de **Altea**, **Jávea**, **Morella** y **Peñíscola**.
+- Cuatro entradas con texto e imágenes: **Altea**, **Jávea**, **Morella** y **Peñíscola**.
 - Lugares de interés y rutas a pie por los cascos antiguos, con enlaces para abrirlas en Google Maps.
 - Recomendaciones de restaurantes cercanos a las rutas, con su ubicación en Maps.
 - Una página de información sobre el contenido del blog y un formulario de contacto.
