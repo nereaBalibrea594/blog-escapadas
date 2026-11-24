@@ -113,6 +113,12 @@ main {
 .hero-images img:nth-child(5) {
     animation-delay: 16s;
 }
+.hero-images img:nth-child(6) {
+    animation-delay: 20s;
+}
+.hero-images img:nth-child(7) {
+    animation-delay: 24s;
+}
 
 /* Oscurecemos las fotos*/
 
