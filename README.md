@@ -1,32 +1,43 @@
 # Escapadas de fin de semana
 
-Blog de viajes creado como parte de la **Actividad 1: Laboratorio de creación de un blog**. El proyecto presenta destinos de la Comunidad Valenciana y propone ideas para organizar escapadas de fin de semana.
+Blog de viajes con ideas para descubrir destinos de la Comunidad Valenciana y organizar escapadas de fin de semana.
 
-## Objetivo
+## Qué encontrarás
 
-Practicar los fundamentos de desarrollo web con HTML y CSS mediante la creación de un sitio sencillo, visual y navegable, con contenido de viajes e imágenes.
+- Una portada con destinos destacados y acceso a sus fichas.
+- Guías de **Altea**, **Jávea**, **Morella** y **Peñíscola**.
+- Lugares de interés y rutas a pie por los cascos antiguos, con enlaces para abrirlas en Google Maps.
+- Recomendaciones de restaurantes cercanos a las rutas, con su ubicación en Maps.
+- Una página de información sobre el contenido del blog y un formulario de contacto.
 
-## Contenido
+## Estructura del proyecto
 
-- `index.html`: portada del blog y destinos destacados.
+- `index.html`: portada.
 - `destinos.html`: listado de destinos.
-- `altea.html`, `javea.html`, `morella.html` y `peniscola.html`: páginas con información de cada destino y enlaces a Google Maps.
-- `contacto.html`: formulario que prepara un correo en la aplicación de correo del visitante.
-- `css/style.css`: estilos y diseño del sitio.
+- `altea.html`, `javea.html`, `morella.html` y `peniscola.html`: fichas de destinos.
+- `info.html`: información sobre el contenido del blog.
+- `contacto.html`: formulario de contacto.
+- `css/style.css`: estilos del sitio.
 - `img/`: imágenes utilizadas en las páginas.
-
-Los destinos que aparecen en el blog incluyen Altea, Jávea, Morella y Peñíscola.
 
 ## Tecnologías
 
 - HTML5
 - CSS3
-- JavaScript básico para preparar el correo del formulario mediante la aplicación de correo del visitante. No se necesita servidor, pero el navegador debe tener configurada una aplicación para enlaces `mailto:`.
+- JavaScript para preparar el mensaje del formulario.
 
-## Cómo ver el proyecto
+## Web publicada
 
-No requiere instalación ni dependencias. Abre `index.html` en un navegador. También puedes usar la extensión **Live Server** de Visual Studio Code para previsualizarlo mientras trabajas.
+Visita el blog en [https://nereabalibrea594.github.io/blog-escapadas/](https://nereabalibrea594.github.io/blog-escapadas/).
+
+Para previsualizarlo localmente mientras trabajas, abre `index.html` en un navegador o utiliza la extensión **Live Server** de Visual Studio Code.
+
+El formulario abre la aplicación de correo del visitante con el mensaje preparado; el visitante debe enviarlo desde allí. Para que funcione, necesita tener configurada una aplicación de correo. El destinatario actual es `contacto@escapadas.com`.
+
+## Publicación
+
+El proyecto se puede publicar como sitio estático con GitHub Pages. Una vez configurado, los cambios subidos a la rama de publicación se despliegan automáticamente.
 
 ## Actividad
 
-Este proyecto se ha realizado con fines educativos para aplicar conceptos básicos de HTML y CSS en la creación de un blog.
+Proyecto realizado para la **Actividad 1: Laboratorio de creación de un blog**, con el objetivo de practicar los fundamentos de HTML y CSS.
