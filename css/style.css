@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f7f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cabecera */
+header {
+    background-color: #f8f7f4;
+    padding: 30px 60px 20px;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* MENU */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+nav a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+nav a:hover {
+    color: #9a6b45;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 500px;
+    margin: 40px 30px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Imagenes del hero*/
+
+.hero-images {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* IMAGENES */
+
+.hero-images img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    
+    opacity: 0;
+    animation: cambiarImagen 16s infinite;
+}
+
+/*Cada imagen aparece en un momento diferente*/
+
+.hero-images img:nth-child(1) {
+    animation-delay: 0s;
+}
+.hero-images img:nth-child(2) {
+    animation-delay: 4s;
+}
+.hero-images img:nth-child(3) {
+    animation-delay: 8s;
+}
+.hero-images img:nth-child(4) {
+    animation-delay: 12s;
+}
+.hero-images img:nth-child(5) {
+    animation-delay: 16s;
+}
+
+/* Oscurecemos las fotos*/
+
+.hero-images::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.38);
+}
+
+/* ANIMACIÓN */
+@keyframes cambiarImagen {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* TEXTO ENCIMA DE LAS FOTOS */
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+    padding: 40px;
+    color:white;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #333;
+    padding: 12px 25px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #9a6b45;
+    color: white;
+}
+
+/* DESTINO */
+.destacados {
+    padding: 60px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.destino {
+    background-color: white;
+    margin-bottom: 30px;
+    display: flex;
+    min-height: 300px;
+}
+
+.destino img {
+    width: 45%;
+    object-fit: cover;
+}
+
+.destino-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destino-card {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.destino-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.destino-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.destino-content h3 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.destino-content p {
+    margin: 0 auto 22px;
+    max-width: 450px;
+    color:#555;
+    line-height: 1.6;
+}
+
+.destino-content .button {
+    display: inline-block;
+}
+
+.categoria {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #9a6b45;
+    margin-bottom: 10px;
+}
+
+.destino h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.destino-info p {
+    margin-bottom: 20px;
+}
+
+.destino-info a {
+    color: #9a6b45;
+    font-weight: bold;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+/*======================
+   PÁGINA DE CONTÁCTO
+======================*/
+
+.contacto {
+    max-width: 900px;
+    margin: 70px auto 100px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.contacto-intro {
+    max-width: 700px;
+    margin: 25px auto 45px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.formulario {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.campo {
+    margin-bottom: 25px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #d8d5d0;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.campo input {
+    height: 48px;
+}
+
+.campo textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #9a6b45;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #999;
+}
+
+.formulario .button {
+    display: block;
+    margin: 10px auto 0;
+    border: none;
+    cursor: pointer;
+}
+
+.contacto-email {
+    margin-top: 55px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    color: #555;
+}
+
+.contacto-email p {
+    margin-bottom: 8px;
+}
+
+.contacto-email strong {
+    color: #333;
+    font-size: 16px;
+}
+
+/*======================
+   PÁGINA DE DESTINOS
+======================  */
+
+.destinos {
+    max-width: 1200px;
+    margin: 60px auto 100px;
+    padding: 0 30px;
+}
+
+.destinos .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.destinos .section-title h2{
+    margin-bottom: 15px;
+}
+
+.destinos .section-title > p:last-child {
+    font-size: 17px;
+    color: #555;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.entrada {
+    max-width: 1100px;
+    margin: 60px auto 100px;
+    padding: 0 30px;
+}
+
+.entrada > img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.entrada-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.entrada-contenido .subtitle {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.entrada-contenido h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.entrada-contenido .intro {
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 45px;
+}
+
+.entrada-contenido h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 40px 0 15px;
+}
+
+.entrada-contenido p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.entrada-contenido .button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.recomendacion {
+    margin-top: 45px;
+    padding: 25px 30px;
+    background-color: #f5f2ed;
+    border-left: 4px solid #9a6b45;
+}
+
+.recomendacion h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.recomendacion p {
+    margin: 0;
+}
+
+.volver {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    color: #9a6b45;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESTAURANTES
+========================= */
+
+.restaurantes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.restaurante {
+    background-color: #fff;
+    padding: 25px;
+    border: 1px solid #e5e1dc;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.restaurante h4 {
+    margin: 0 0 10px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #333;
+}
+
+.restaurante .valoracion {
+    margin: 0 0 12px;
+    color: #9a6b45;
+    font-size: 15px;
+}
+
+.restaurante p {
+    margin-bottom: 18px;
+}
+
+.restaurante .button {
+    font-size: 14px;
+    padding: 10px 16px;
+}

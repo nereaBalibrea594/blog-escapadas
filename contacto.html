@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Escapadas de fin de semana</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ESCAPADAS DE FIN DE SEMANA</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="info.html">Sobre el blog</a>            
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <div class="section-title">
+                <p class="subtitle">ESTAMOS PARA AYUDARTE</p>
+                <h2>Contacta con nosotros</h2>
+            </div>
+
+            <p class="contacto-intro"> 
+                ¿Tienes alguna duda, recomendación o quieres compartir 
+                tus escapadas con nosotros? Escríbenos.
+            </p>
+            <form class="formulario" id="formularioContacto">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="button">
+                    Enviar mensaje
+                </button>
+                <p id="mensajeEnviado"></p>
+            </form>
+
+            <div class="contacto-email">
+                <p>Tambien puedes escribirnos a:</p>
+                <strong> contacto@escapadas.com</strong>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Escapadas de fin de semana.</p>
+        <p>Viajar también es una forma de desconectar</p>
+    </footer>
+    <script>
+        const formulario = document.getElementById("formularioContacto");
+        const mensajeEnviado = document.getElementById("mensajeEnviado");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            mensajeEnviado.textContent = 
+                "✓ ¡Mensaje enviado! Gracias por contactar con nosotros."
+            formulario.reset();
+        });
+    </script>
+</body>
+</html>
