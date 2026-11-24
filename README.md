@@ -10,8 +10,8 @@ Practicar los fundamentos de desarrollo web con HTML y CSS mediante la creación
 
 - `index.html`: portada del blog y destinos destacados.
 - `destinos.html`: listado de destinos.
-- `javea.html` y `altea.html`: páginas con información de destinos.
-- `contacto.html`: formulario de contacto de demostración.
+- `altea.html`, `javea.html`, `morella.html` y `peniscola.html`: páginas con información de cada destino y enlaces a Google Maps.
+- `contacto.html`: formulario que prepara un correo en la aplicación de correo del visitante.
 - `css/style.css`: estilos y diseño del sitio.
 - `img/`: imágenes utilizadas en las páginas.
 
@@ -21,7 +21,7 @@ Los destinos que aparecen en el blog incluyen Altea, Jávea, Morella y Peñísco
 
 - HTML5
 - CSS3
-- JavaScript básico para mostrar una confirmación al enviar el formulario (sin envío a un servidor).
+- JavaScript básico para preparar el correo del formulario mediante la aplicación de correo del visitante. No se necesita servidor, pero el navegador debe tener configurada una aplicación para enlaces `mailto:`.
 
 ## Cómo ver el proyecto
 

@@ -47,12 +47,12 @@
                 <button type="submit" class="button">
                     Enviar mensaje
                 </button>
-                <p id="mensajeEnviado"></p>
+                <p id="mensajeEnviado" role="status" aria-live="polite"></p>
             </form>
 
             <div class="contacto-email">
                 <p>Tambien puedes escribirnos a:</p>
-                <strong> contacto@escapadas.com</strong>
+                <a href="mailto:contacto@escapadas.com"><strong>contacto@escapadas.com</strong></a>
             </div>
         </section>
     </main>
@@ -68,9 +68,17 @@
         formulario.addEventListener("submit", function(event) {
             event.preventDefault();
 
-            mensajeEnviado.textContent = 
-                "✓ ¡Mensaje enviado! Gracias por contactar con nosotros."
-            formulario.reset();
+            const datos = new FormData(formulario);
+            const nombre = datos.get("nombre").trim();
+            const email = datos.get("email").trim();
+            const mensaje = datos.get("mensaje").trim();
+            const asunto = `Mensaje desde el blog - ${nombre}`;
+            const cuerpo = `Nombre: ${nombre}\nCorreo: ${email}\n\nMensaje:\n${mensaje}`;
+            const enlaceCorreo = `mailto:contacto@escapadas.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+
+            mensajeEnviado.textContent =
+                "Se abrirá tu aplicación de correo con el mensaje preparado. Pulsa Enviar allí para completar el envío.";
+            window.location.href = enlaceCorreo;
         });
     </script>
 </body>
